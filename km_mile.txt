@@ -1,0 +1,18 @@
+--Create Oracle function that converts Kilometers to Miles. You can google the conversion
+--equation. You need to use the most suitable data types for this operation.
+
+CREATE OR REPLACE FUNCTION Km_To_Mile
+                            (in_Kilometer IN NUMBER)
+                            RETURN NUMBER
+IS
+    in_Miles NUMBER(12,2);
+BEGIN
+    in_Miles := in_Kilometer * 0.621;
+    RETURN in_Miles;
+END;
+/
+SELECT km_to_mile(3)FROM DUAL;
+    
+    
+
+                            
